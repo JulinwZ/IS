@@ -1,0 +1,15 @@
+parser grammar SpaceBattleParser;
+options { tokenVocab=SpaceBattleLexer; }
+
+program: (rules NEWLINE)* EOF;
+
+rules: builds
+    | orders
+    | includes
+    | precedes
+    ;
+
+builds: ID BUILDS ID (',' ID)*;
+orders: ID ORDERS ID ID (',' ID)*;
+includes: ID INCLUDES ID (',' ID)*;
+precedes: ID PRECEDES ID;

@@ -1,0 +1,11 @@
+Player builds SpaceShip, EnergyShield
+Game builds Asteroid, Nebula
+Player orders SpaceShip Move, Turn, Shoot
+Player orders EnergyShield Activate, Deactivate
+Move includes CheckCollision, UseFuel
+UseFuel precedes Move
+Move precedes CheckCollision
+Shoot includes SpendAmmo
+SpendAmmon precedes Shoot
+ActivateShield includes ShieldEnergy
+ShieldEnergy precedes ActicateShield
